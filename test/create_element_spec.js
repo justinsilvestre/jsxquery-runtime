@@ -115,4 +115,10 @@ describe('createElement', () => {
 
     expect(span.render()).toNotContain(rawText);
   });
+
+  it('ignores onCamelcasedEventName attributes', () => {
+    const span = createElement('span', { onClick: () => console.log('XO'.repeat(50)) });
+
+    expect(span.render()).toEqual('<span></span>');
+  })
 });

@@ -11,6 +11,12 @@ function attributeValue(jsxName, jsxValue) {
     : jsxValue;
 }
 
+function attributeIsToBeRendered(name, rawValue) {
+  return rawValue === false || name.match(/on[A-Z][a-z]+/)
+    ? false
+    : true;
+}
+
 module.exports = function(obj) {
   var renderedAttributes = [];
   var stringValue;
@@ -18,7 +24,7 @@ module.exports = function(obj) {
 
   for (name in obj) {
     attributeRawValue = attributeValue(name, obj[name]);
-    if (attributeRawValue !== false) {
+    if (attributeIsToBeRendered(name, attributeRawValue)) {
       stringValue = typeof attributeRawValue === 'string' ? attributeRawValue : JSON.stringify(attributeRawValue);
       renderedAttributes.push(attributeName(name) + '="' + stringValue + '"');
     }
