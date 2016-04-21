@@ -1,0 +1,27 @@
+{
+  "name": "jsxquery-runtime",
+  "version": "1.0.0",
+  "description": "Functions needed at runtime to use jsxQuery components' full functionality",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "Justin Silvestre",
+  "license": "CC-BY-NC-SA-4.0",
+  "repository":
+  { 
+    "type" : "git",
+    "url" : "https://github.com/justinsilvestre/jsxquery-runtime.git"
+  },
+  "dependencies": {
+    "lodash.escape": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.6",
+    "babel-eslint": "^6.0.3",
+    "eslint": "^2.8.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "expect": "^1.18.0",
+    "mocha": "^2.4.5"
+  }
+}
