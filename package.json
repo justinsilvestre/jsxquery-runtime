@@ -1,6 +1,6 @@
 {
   "name": "jsxquery-runtime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Functions needed at runtime to use jsxQuery components' full functionality",
   "main": "index.js",
   "scripts": {
